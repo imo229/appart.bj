@@ -1,14 +1,17 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  primary: '#E67E22',    // Warm Orange (inspired by Benin's sunset)
+  secondary: '#D35400',  // Darker Orange
+  accent: '#F39C12',     // Golden Yellow
+  background: '#FDFEFE', // Clean White
+  backgroundAlt: '#F8F9FA', // Light Grey
+  text: '#2C3E50',       // Dark Blue-Grey
+  textLight: '#7F8C8D',  // Light Grey for secondary text
+  grey: '#BDC3C7',       // Light Grey
+  card: '#FFFFFF',       // Pure White for cards
+  success: '#27AE60',    // Green for success states
+  border: '#ECF0F1',     // Very light grey for borders
 };
 
 export const buttonStyles = StyleSheet.create({
@@ -35,55 +38,86 @@ export const commonStyles = StyleSheet.create({
     backgroundColor: colors.background,
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     maxWidth: 800,
     width: '100%',
   },
   title: {
-    fontSize: 24,
-    fontWeight: '800',
-    textAlign: 'center',
+    fontSize: 28,
+    fontWeight: '700',
+    fontFamily: 'Montserrat_700Bold',
     color: colors.text,
-    marginBottom: 10
+    marginBottom: 8
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    fontFamily: 'Montserrat_600SemiBold',
+    color: colors.text,
+    marginBottom: 16
   },
   text: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: '400',
+    fontFamily: 'OpenSans_400Regular',
     color: colors.text,
-    marginBottom: 8,
     lineHeight: 24,
-    textAlign: 'center',
+  },
+  textLight: {
+    fontSize: 14,
+    fontWeight: '400',
+    fontFamily: 'OpenSans_400Regular',
+    color: colors.textLight,
+    lineHeight: 20,
   },
   section: {
     width: '100%',
-    alignItems: 'center',
     paddingHorizontal: 20,
-  },
-  buttonContainer: {
-    width: '100%',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    marginBottom: 24,
   },
   card: {
-    backgroundColor: colors.backgroundAlt,
-    borderColor: colors.grey,
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    padding: 16,
+    marginBottom: 16,
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
+    elevation: 3,
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    marginVertical: 8,
-    width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
-    elevation: 2,
+    borderColor: colors.border,
   },
-  icon: {
-    width: 60,
-    height: 60,
-    tintColor: "white",
+  propertyCard: {
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    marginBottom: 20,
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
+    elevation: 3,
+    borderWidth: 1,
+    borderColor: colors.border,
+    overflow: 'hidden',
+  },
+  searchContainer: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: colors.border,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  priceTag: {
+    backgroundColor: colors.primary,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+    alignSelf: 'flex-start',
+  },
+  priceText: {
+    color: colors.card,
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
